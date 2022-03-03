@@ -17,4 +17,4 @@ caesar but sus <br>
 
 ## Flag
 
-tanggerangkota{pemanasan_kripto_easy_dahulu}
+tangerangkota{pemanasan_kripto_easy_dahulu}

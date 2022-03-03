@@ -9,7 +9,7 @@ Coba cari informasi mengenai `nama asli` (bukan versi inggrisnya) pulau tersebut
 Misalkan,
 - Pulau Sebesi
 - Koordinat -5.9460268, 105.4723591
-- Maka flagnya: `tanggerangkota{sebesi,-5.9460268,105.4723591}`
+- Maka flagnya: `tangerangkota{sebesi,-5.9460268,105.4723591}`
 
 *Catatan: flag tidak menggunakan spasi, tidak menggunakan huruf kapital, dan tidak perlu menggunakan kata `pulau` lagi*
 
@@ -24,4 +24,4 @@ Misalkan,
 
 ## Flag
 
-tanggerangkota{zmiinyi,45.2547244,30.199635}
+tangerangkota{zmiinyi,45.2547244,30.199635}
