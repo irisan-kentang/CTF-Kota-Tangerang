@@ -1,0 +1,23 @@
+version: '3'
+services:
+  kalkulator-app:
+   build:
+     context: .
+     dockerfile: Dockerfile.app
+   restart: on-failure
+   networks:
+     - kalkulator-network
+
+  kalkulator-nginx:
+   build:
+     context: .
+     dockerfile: Dockerfile.nginx
+   restart: on-failure
+   ports:
+     - "10003:80"
+   networks:
+     - kalkulator-network
+
+networks:
+  kalkulator-network:
+    driver: bridge

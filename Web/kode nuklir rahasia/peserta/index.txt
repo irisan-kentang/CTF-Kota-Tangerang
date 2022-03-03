@@ -1,0 +1,15 @@
+<?php
+
+if (isset($_GET['kode1']) && isset($_GET['kode2'])) {
+    $kode1 = $_GET['kode1'];
+    $kode2 = $_GET['kode2'];
+
+    if ($kode1 !== $kode2) {
+        if ($kode1 == $kode2) {
+            die("tangerangkota{ini_bukan_flagnya_ya}");
+        }
+    }
+    die("kode salah");
+} else {
+    die('/?kode1=&kode2=');
+}
