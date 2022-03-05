@@ -3,7 +3,7 @@ SequelTime
 
 ## Deskripsi Soal
 
-There're something strange about this git repository. I wonder what it is
+Our system has been compromised again. This time the target were databases
 
 ---
 ## Proof of Concept
