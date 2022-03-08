@@ -3,7 +3,7 @@ Fraud
 
 ## Deskripsi Soal
 
-Apparently around this year, we'd received a numerous reports of phishing activities. It can be said that it was a classic-type of phishing type which is mainly targetting social media user. Recently, we found that a Twitter user named `J5ggR` that might be the real perpretator. Also he seems to host his code in a certain repository. Could you provide us with some details?
+Apparently around this year, we'd received a numerous reports of phishing activities. It can be said that it was a classic phishing type which is mainly targetting social media user. Recently, we found that a Twitter user named `J5ggR` that might be the real perpretator. Also he seems to host his code in a certain repository. Could you provide us with some details?
 
 1. What is the perpretator's real name? (eg: John Smith)
 2. What is the perpreator's platform target (eg: Reddit)
