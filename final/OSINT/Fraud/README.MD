@@ -14,7 +14,8 @@ eg: tangerangkota{JohnSmith_Reddit_NewYork}
 
 ---
 ## Proof of Concept
-- User lookup using `in:email` & `created:>2022-01-01`, found `Vivien Nikola` as suspected user
+- Make use of `Twitter forgot password`, found `vi******@p****`
+- User lookup using `vi in:email` & `created:>2022-01-01`, found `Vivien Nikola` as suspected user
 - Check core.db for `server detail`, then IP lookup to obtain `server location`
 - Check repository name for `phishing platform`
 
