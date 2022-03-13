@@ -1,0 +1,1 @@
+tangerangkota{pakai_kunci_aes_ofb_yang_sama_bisa_di_xor_}
