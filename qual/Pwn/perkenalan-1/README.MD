@@ -7,6 +7,7 @@ Input Berbahaya pada ular
 ---
 ## Proof of Concept
 - `__import__('os').system('cat flag')`
+- `Dangerous python input function`
 ## Flag
 See the flag file
 
