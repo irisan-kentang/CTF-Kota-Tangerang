@@ -4,6 +4,14 @@ services:
    build:
      context: .
      dockerfile: Dockerfile.app
+   deploy:
+     resources:
+       limits:
+         cpu: "1"
+         memory: "1024M"
+       reservations:
+         cpu: "0.25"
+         memory: "256M"
    restart: on-failure
    networks:
      - kalkulator-network
@@ -14,7 +22,7 @@ services:
      dockerfile: Dockerfile.nginx
    restart: on-failure
    ports:
-     - "10003:80"
+     - "5004:80"
    networks:
      - kalkulator-network
 

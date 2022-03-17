@@ -1,6 +1,6 @@
 version: '3'
 services:
-  admin-panel-app:
+  nuklir-app:
    build:
      context: .
      dockerfile: Dockerfile.app
@@ -14,18 +14,18 @@ services:
          memory: "256M"
    restart: on-failure
    networks:
-     - admin-panel-network
+     - nuklir-network
 
-  admin-panel-nginx:
+  nuklir-nginx:
    build:
      context: .
      dockerfile: Dockerfile.nginx
    restart: on-failure
    ports:
-     - "5003:80"
+     - "5002:80"
    networks:
-     - admin-panel-network
+     - nuklir-network
 
 networks:
-  admin-panel-network:
+  nuklir-network:
     driver: bridge

@@ -1,0 +1,25 @@
+/* full background image */
+body {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.myForm {
+    min-width: 500px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+
+@media (max-width: 500px) {
+.myForm {
+    min-width: 90%;
+}
+}

@@ -1,4 +1,4 @@
-limit_req_zone $binary_remote_addr zone=admin_panel:10m rate=200r/m;
+limit_req_zone $binary_remote_addr zone=nuklir_zone:10m rate=200r/m;
 
 server {
     listen 80;
@@ -7,10 +7,10 @@ server {
     access_log /var/log/nginx/access.log;
     root /var/www;
     location ~ \.php$ {
-        limit_req zone=admin_panel;
+        limit_req zone=nuklir_zone;
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass admin-panel-app:9000;
+        fastcgi_pass nuklir-app:9000;
         fastcgi_index index.php;
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
@@ -19,7 +19,7 @@ server {
         proxy_set_header X-Forwarded-For $remote_addr;
     }
     location / {
-        limit_req zone=admin_panel;
+        limit_req zone=nuklir_zone;
         try_files $uri $uri/ /index.php?$query_string;
         gzip_static on;
     }
