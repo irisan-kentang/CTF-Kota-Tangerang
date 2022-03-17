@@ -1,0 +1,7 @@
+version: '3'
+services:
+  perkenalan-1:
+    build: .
+    restart: on-failure
+    ports:
+      - 1003:5000

