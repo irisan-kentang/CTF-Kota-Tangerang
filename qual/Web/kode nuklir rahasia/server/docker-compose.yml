@@ -7,10 +7,10 @@ services:
    deploy:
      resources:
        limits:
-         cpu: "1"
+         cpus: "1"
          memory: "1024M"
        reservations:
-         cpu: "0.25"
+         cpus: "0.25"
          memory: "256M"
    restart: on-failure
    networks:
