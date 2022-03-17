@@ -7,7 +7,7 @@ server {
     access_log /var/log/nginx/access.log;
     root /var/www;
     location ~ \.php$ {
-        limit_req zone=nuklir_zone burst=20;
+        limit_req zone=nuklir_zone burst=20 nodelay;
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
         fastcgi_pass nuklir-app:9000;
@@ -19,7 +19,7 @@ server {
         proxy_set_header X-Forwarded-For $remote_addr;
     }
     location / {
-        limit_req zone=nuklir_zone burst=20;
+        limit_req zone=nuklir_zone burst=20 nodelay;
         try_files $uri $uri/ /index.php?$query_string;
         gzip_static on;
     }
