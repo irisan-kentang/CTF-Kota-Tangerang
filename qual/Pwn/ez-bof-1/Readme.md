@@ -2,7 +2,7 @@
 So Ez :(
 
 ## Deskripsi Soal
--
+- nc [host]:[port]
 
 ---
 ## Proof of Concept
