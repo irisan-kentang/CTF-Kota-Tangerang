@@ -1,6 +1,6 @@
 version: '3'
 services:
-  nuklir-app:
+ wangy-app:
    build:
      context: .
      dockerfile: Dockerfile.app
@@ -14,9 +14,9 @@ services:
          memory: "256M"
    restart: on-failure
    networks:
-     - nuklir-network
+     - wangy-network
 
-  nuklir-nginx:
+  wangy-nginx:
    build:
      context: .
      dockerfile: Dockerfile.nginx
@@ -24,8 +24,8 @@ services:
    ports:
      - "5003:80"
    networks:
-     - nuklir-network
+     - wangy-network
 
 networks:
-  nuklir-network:
+  wangy-network:
     driver: bridge
