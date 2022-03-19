@@ -13,4 +13,4 @@ WORKDIR /challs
 
 EXPOSE 5000
 
-CMD socat TCP-LISTEN:5000,reuseaddr,fork EXEC:./warm-up,su=nobody
+CMD socat TCP-LISTEN:5000,reuseaddr,fork EXEC:./warm-up-1,su=nobody

