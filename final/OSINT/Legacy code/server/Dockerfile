@@ -1,4 +1,4 @@
-FROM k3gabut4n/bot-kegabutan:latest
+FROM k3gabut4ndev/bot-kegabutan:latest
 
 WORKDIR /bot-kegabutan
 
