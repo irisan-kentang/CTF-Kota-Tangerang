@@ -1,0 +1,7 @@
+version: '3'
+services:
+  bot-kegabutan:
+    build: .
+    environment:
+      - FLAG=tangerangkota{w1sh_y0u_all_th3_best_but_n3ver_rely_on_a_mythic4l_wish1ng_well}
+      - TOKEN=OTU0MjE0MDI1NTQwMDEwMDM0.YjP3EA.HsP45MKYHXYU09zMT2RjEtdLCxQ
