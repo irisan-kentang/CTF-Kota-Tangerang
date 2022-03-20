@@ -58,7 +58,7 @@ class Commands(commands.Cog):
     @commands.command(help="About me")
     @commands.has_permissions(send_messages=True)
     async def aboutme(self,ctx):
-        embedVar = discord.Embed(description=f"Made with :heart:\n\n Deployed using Docker by ||k3gabut4n||",color=0x1685b5)
+        embedVar = discord.Embed(description=f"Made with :heart:\n\n Deployed using Docker by ||k3gabut4ndev||",color=0x1685b5)
         await ctx.send(embed=embedVar)
 
 
