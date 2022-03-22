@@ -1,0 +1,31 @@
+version: '3'
+services:
+  arsip-biru-app:
+   build:
+     context: .
+     dockerfile: Dockerfile.app
+   deploy:
+     resources:
+       limits:
+         cpus: "1"
+         memory: "1024M"
+       reservations:
+         cpus: "0.25"
+         memory: "256M"
+   restart: always
+   networks:
+     - arsip-biru-network
+
+  arsip-biru-nginx:
+   build:
+     context: .
+     dockerfile: Dockerfile.nginx
+   restart: always
+   ports:
+     - "2002:80"
+   networks:
+     - arsip-biru-network
+
+networks:
+  arsip-biru-network:
+    driver: bridge
