@@ -1,0 +1,18 @@
+version: '3'
+services:
+  apache:
+    build: ./
+    container_name: CVE-2021-41773-RCE
+    restart: always
+    ports:
+      - "5002:80"
+    networks:
+      - apachecve
+  redis:
+    image: "redis:alpine"
+    networks:
+      - apachecve
+
+networks:
+  apachecve:
+    driver: bridge

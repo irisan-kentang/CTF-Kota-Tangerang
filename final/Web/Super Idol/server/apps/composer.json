@@ -1,0 +1,12 @@
+{
+    "name": "cj2021/socialcredit",
+    "authors": [
+        {
+            "name": "bajigur",
+            "email": "bajigur@gmail.com"
+        }
+    ],
+    "require": {
+        "predis/predis": "^1.1"
+    }
+}
