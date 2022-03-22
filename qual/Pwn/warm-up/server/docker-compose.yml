@@ -1,0 +1,7 @@
+version: '3'
+services:
+  warm-up:
+    build: .
+    restart: on-failure
+    ports:
+      - 1004:5000
