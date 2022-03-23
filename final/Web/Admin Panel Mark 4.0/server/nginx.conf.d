@@ -7,7 +7,7 @@ server {
     access_log /var/log/nginx/access.log;
     root /var/www/public;
     location ~ \.php$ {
-        limit_req_zone $binary_remote_addr zone=admin_panel:10m rate=200r/m;
+        limit_req zone=admin_panel burst=20 nodelay;
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
         fastcgi_pass admin-panel-4-app:9000;
@@ -17,7 +17,7 @@ server {
         fastcgi_param PATH_INFO $fastcgi_path_info;
     }
     location / {
-        limit_req_zone $binary_remote_addr zone=admin_panel:10m rate=200r/m;
+        limit_req zone=admin_panel burst=20 nodelay;
         try_files $uri $uri/ /index.php?$query_string;
         gzip_static on;
     }
