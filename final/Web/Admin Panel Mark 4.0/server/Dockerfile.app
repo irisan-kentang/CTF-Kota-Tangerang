@@ -31,15 +31,6 @@ RUN docker-php-ext-install pdo_mysql
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-ENV DB_DATABASE=admin_panel_4 \
-    DB_PASSWORD=4dm1n_p4n3l_4 \
-    DB_USERNAME=root \
-    DB_HOST=mysql \
-    APP_NAME=Laravel \
-    APP_ENV=local \
-    APP_KEY=base64:CnxC/nYwKMFmB4ht2+StTw3Z/xo6ATK2LDiOk9GBRo4= \
-    APP_DEBUG=false
-
 # Add user for laravel application
 RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
@@ -47,7 +38,7 @@ RUN useradd -u 1000 -ms /bin/bash -g www www
 # Copy existing application directory contents
 COPY ./app /var/www
 
-RUN cd /var/www && composer install && php artisan migrate:fresh
+RUN cd /var/www && composer install
 
 # Copy existing application directory permissions
 COPY --chown=www:www . /var/www
@@ -57,4 +48,6 @@ USER www
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
-CMD ["php-fpm"]
+
+copy ./run.sh /tmp
+ENTRYPOINT ["/tmp/run.sh"]
