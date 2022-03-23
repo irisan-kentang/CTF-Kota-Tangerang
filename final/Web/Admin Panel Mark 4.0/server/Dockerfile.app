@@ -40,6 +40,9 @@ COPY ./app /var/www
 COPY ./run.sh /tmp
 RUN chmod +x /tmp/run.sh
 
+RUN chmod 755 /var/www/storage -R
+RUN chown www:www /var/www/storage -R
+
 RUN cd /var/www && composer install
 
 # Copy existing application directory permissions
