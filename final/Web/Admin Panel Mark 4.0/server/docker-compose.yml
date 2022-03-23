@@ -1,0 +1,42 @@
+version: '3'
+services:
+  admin-panel-4-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    restart: unless-stopped
+    networks:
+      - admin-panel-4-network
+
+  #Nginx Service
+  server-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    restart: unless-stopped
+    ports:
+      - "5003:80"
+    networks:
+      - admin-panel-4-network
+
+
+  #MySQL Service
+  mysql:
+    image: mysql:5.7.22
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: admin_panel_4
+      MYSQL_ROOT_PASSWORD: 4dm1n_p4n3l_4
+    volumes:
+      - dbdata:/var/lib/mysql/
+    networks:
+      - admin-panel-4-network
+
+#Docker Networks
+networks:
+  admin-panel-4-network:
+    driver: bridge
+#Volumes
+volumes:
+  dbdata:
+    driver: local
