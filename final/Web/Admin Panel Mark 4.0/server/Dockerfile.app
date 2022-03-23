@@ -50,4 +50,5 @@ USER www
 EXPOSE 9000
 
 copy ./run.sh /tmp
+run chmod +x /tmp/run.sh
 ENTRYPOINT ["/tmp/run.sh"]
