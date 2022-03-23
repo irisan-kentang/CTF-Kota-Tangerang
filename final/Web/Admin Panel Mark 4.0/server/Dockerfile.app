@@ -37,6 +37,8 @@ RUN useradd -u 1000 -ms /bin/bash -g www www
 
 # Copy existing application directory contents
 COPY ./app /var/www
+COPY ./run.sh /tmp
+RUN chmod +x /tmp/run.sh
 
 RUN cd /var/www && composer install
 
@@ -48,7 +50,4 @@ USER www
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
-
-copy ./run.sh /tmp
-run chmod +x /tmp/run.sh
 ENTRYPOINT ["/tmp/run.sh"]
