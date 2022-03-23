@@ -33,14 +33,14 @@ RUN docker-php-ext-install gd
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-ENV DB_DATABASE: admin_panel_4 \
-    DB_PASSWORD: 4dm1n_p4n3l_4 \
-    DB_USERNAME: root \
-    DB_HOST: mysql \
-    APP_NAME: Laravel \
-    APP_ENV: local \
-    APP_KEY: base64:CnxC/nYwKMFmB4ht2+StTw3Z/xo6ATK2LDiOk9GBRo4= \
-    APP_DEBUG: false
+ENV DB_DATABASE=admin_panel_4 \
+    DB_PASSWORD=4dm1n_p4n3l_4 \
+    DB_USERNAME=root \
+    DB_HOST=mysql \
+    APP_NAME=Laravel \
+    APP_ENV=local \
+    APP_KEY=base64:CnxC/nYwKMFmB4ht2+StTw3Z/xo6ATK2LDiOk9GBRo4= \
+    APP_DEBUG=false
 
 # Add user for laravel application
 RUN groupadd -g 1000 www
