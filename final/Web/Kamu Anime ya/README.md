@@ -1,8 +1,8 @@
-# Super Idol
+# Kamu Anime Ya
 
 ## Description
 
-Super Idol de xiào róng dōu méi nǐ de tián, Social Credit +100
+Kamu Anime Ya banh?
 
 ## Penjelasan Penyelesaian Soal
 - Apache CVE-2021-41773 
