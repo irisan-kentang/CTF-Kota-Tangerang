@@ -9,7 +9,7 @@ RUN a2enmod php7.4
 RUN a2enmod rewrite
 ADD entry.sh /entry.sh
 ADD 000-default.conf /etc/apache2/sites-enabled/000-default.conf
-ADD apps /var/www/social_credit
+ADD apps /var/www/anime
 RUN chmod 755 /entry.sh && mkdir -p /var/run/apache2 && a2enmod cgi
 
 ENTRYPOINT ["/entry.sh"]
