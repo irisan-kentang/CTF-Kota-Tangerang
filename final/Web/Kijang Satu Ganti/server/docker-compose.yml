@@ -1,0 +1,32 @@
+version: '3.2'
+services:
+  kijang-satu-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    restart: on-failure
+    depends_on:
+      - kijang-satu-mongo
+    networks:
+      - kijang-satu-network
+
+  kijang-satu-nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    restart: on-failure
+    ports:
+      - "5004:80"
+    networks:
+      - kijang-satu-network
+
+  kijang-satu-mongo:
+    image : mongo
+    restart: on-failure
+    networks:
+      - kijang-satu-network
+
+networks:
+  kijang-satu-network:
+    driver: overlay
+    attachable: true
