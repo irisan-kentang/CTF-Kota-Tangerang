@@ -10,7 +10,7 @@ server {
         limit_req zone=arsip_biru_zone burst=20 nodelay;
         try_files $uri =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
-        fastcgi_pass nuklir-app:9000;
+        fastcgi_pass arsip-biru-app:9000;
         fastcgi_index index.php;
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
