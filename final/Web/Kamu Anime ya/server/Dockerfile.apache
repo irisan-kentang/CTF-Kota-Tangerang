@@ -1,20 +1,22 @@
 FROM httpd:2.4.49
 
 RUN apt update
+RUN apt install php7.4-cli -y
     
 WORKDIR /var/www/html
     
 ADD httpd.conf /usr/local/apache2/conf/httpd.conf
 ADD web.apache.conf /usr/local/apache2/conf/web.apache.conf
 
+RUN groupadd -g 1000 www
+RUN useradd -u 1000 -ms /bin/bash -g www www
+
 ADD entry.sh /entry.sh
 ADD apps /var/www/html
 RUN chmod 755 /entry.sh
 RUN chmod 777 /var/www/html/init.php
+RUN chown www:www /var/www/html/init.php
 RUN chmod 777 /usr/local/apache2/logs -R
-
-RUN groupadd -g 1000 www
-RUN useradd -u 1000 -ms /bin/bash -g www www
 
 # Change current user to www
 USER www
