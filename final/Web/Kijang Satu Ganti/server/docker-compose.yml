@@ -21,7 +21,7 @@ services:
       - kijang-satu-network
 
   kijang-satu-mongo:
-    image : mongo
+    image : mongo:4.4.6
     restart: on-failure
     networks:
       - kijang-satu-network
