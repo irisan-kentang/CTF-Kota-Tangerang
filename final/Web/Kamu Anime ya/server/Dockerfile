@@ -10,9 +10,9 @@
 FROM httpd:2.4.49-buster
 COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
 RUN apt update -y
-RUN apt install php7.4-cli php7.4-curl -y
-RUN apt install libapache2-mod-php7.4
-RUN a2enmod php7.4
+RUN apt install php8.1-cli php8.1-curl -y
+RUN apt install libapache2-mod-php8.1
+RUN a2enmod php8.1
 RUN a2enmod rewrite
 
 ADD entry.sh /entry.sh
