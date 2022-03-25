@@ -4,7 +4,7 @@ RUN apk update; \
     apk upgrade;
     
 ADD httpd.conf /usr/local/apache2/conf/httpd.conf
-ADD demo.apache.conf /usr/local/apache2/conf/web.apache.conf
+ADD web.apache.conf /usr/local/apache2/conf/web.apache.conf
 
 ADD entry.sh /entry.sh
 ADD apps /var/www/html
