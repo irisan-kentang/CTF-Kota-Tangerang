@@ -1,7 +1,6 @@
 #!/bin/bash
 
-php /var/www/anime/init.php
-rm /var/www/anime/init.php
+php /var/www/html/init.php
+rm /var/www/html/init.php
 
-source /etc/apache2/envvars
 exec httpd -D FOREGROUND
