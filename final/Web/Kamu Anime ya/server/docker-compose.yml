@@ -1,13 +1,23 @@
 version: '3'
 services:
   apache:
-    build: ./
-    container_name: CVE-2021-41773-RCE
+    build:
+      context: .
+      dockerfile: Dockerfile.apache
     restart: always
     ports:
       - "5002:80"
     networks:
       - apachecve
+      
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile.php
+    restart: always
+    networks:
+      - apachecve
+      
   redis:
     image: "redis:alpine"
     networks:
