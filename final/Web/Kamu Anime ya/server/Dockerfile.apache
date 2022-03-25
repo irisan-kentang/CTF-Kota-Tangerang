@@ -10,4 +10,4 @@ ADD entry.sh /entry.sh
 ADD apps /var/www/html
 RUN chmod 755 /entry.sh
 
-ENTRYPOINT ["/entry.sh"]
+ENTRYPOINT ["sh", "/entry.sh"]
