@@ -11,7 +11,7 @@ FROM httpd:2.4.49-buster
 COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
 RUN apt update -y
 RUN apt install php-cli php-curl -y
-RUN apt install libapache2-mod-php
+RUN apt install libapache2-mod-php -y
 RUN a2enmod php
 RUN a2enmod rewrite
 
