@@ -1,7 +1,7 @@
 FROM httpd:2.4.49
 
 RUN apt update
-RUN apt install php7.4-cli -y
+RUN apt install php-cli -y
     
 WORKDIR /var/www/html
     
