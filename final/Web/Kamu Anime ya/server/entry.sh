@@ -4,4 +4,4 @@ php /var/www/anime/init.php
 rm /var/www/anime/init.php
 
 source /etc/apache2/envvars
-exec /usr/sbin/httpd
+exec httpd
