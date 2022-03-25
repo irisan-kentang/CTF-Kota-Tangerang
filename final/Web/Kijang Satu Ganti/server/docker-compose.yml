@@ -1,10 +1,10 @@
-version: '3.2'
+version: '3'
 services:
   kijang-satu-app:
     build:
       context: .
       dockerfile: Dockerfile.app
-    restart: on-failure
+    restart: always
     depends_on:
       - kijang-satu-mongo
     networks:
@@ -14,7 +14,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.nginx
-    restart: on-failure
+    restart: always
     ports:
       - "5004:80"
     networks:
@@ -22,11 +22,10 @@ services:
 
   kijang-satu-mongo:
     image : mongo:4.4.6
-    restart: on-failure
+    restart: always
     networks:
       - kijang-satu-network
 
 networks:
   kijang-satu-network:
-    driver: overlay
-    attachable: true
+    driver: bridge
