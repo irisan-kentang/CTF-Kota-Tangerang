@@ -4,4 +4,4 @@ services:
     build: .
     restart: on-failure
     ports:
-      - 30001:5000
+      - 4002:5000
