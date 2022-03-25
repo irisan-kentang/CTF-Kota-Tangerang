@@ -8,7 +8,7 @@ RUN a2enmod rewrite
 
 ADD entry.sh /entry.sh
 ADD 000-default.conf /usr/local/apache2/sites-enabled/000-default.conf
-ADD apps /var/www/anime
+ADD apps /var/www/html
 RUN chmod 755 /entry.sh && mkdir -p /var/run/apache2 && a2enmod cgi
 
 ENTRYPOINT ["/entry.sh"]
