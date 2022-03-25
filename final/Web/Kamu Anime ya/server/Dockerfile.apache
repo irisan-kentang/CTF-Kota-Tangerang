@@ -3,5 +3,11 @@ FROM httpd:2.4.33-alpine
 RUN apk update; \
     apk upgrade;
     
-COPY httpd.conf /usr/local/apache2/conf/httpd.conf
-COPY demo.apache.conf /usr/local/apache2/conf/web.apache.conf
+ADD httpd.conf /usr/local/apache2/conf/httpd.conf
+ADD demo.apache.conf /usr/local/apache2/conf/web.apache.conf
+
+ADD entry.sh /entry.sh
+ADD apps /var/www/html
+RUN chmod 755
+
+ENTRYPOINT ["/entry.sh"]
