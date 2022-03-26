@@ -11,7 +11,7 @@ A friend of mine said that he developed a Discord bot. The bot itself could gran
 - Invite bot using Client_ID, then find the developer name using `?aboutme` command
 - Name Lookup on Docker Hub, then pull docker images of `bot-kegabutan`
 - Using SSH deploy keys, pull the private Github Repository of `bot-kegabutan`
-- Checkout for earlier commit to find the legacy code
+- Checkout for earlier branch which is `v1` in order to find the legacy code on `bot.py`
 - Retrieve flag using `?givemea s3cret_fl4g_db02e5e`
  
 
