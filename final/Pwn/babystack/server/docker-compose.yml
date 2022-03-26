@@ -1,7 +1,12 @@
 version: '3'
 services:
-  perkenalan-1:
+  babystack:
     build: .
     restart: on-failure
     ports:
       - 1003:5000
+
+networks:
+  babystack-network:
+    driver: overlay
+    attachable: true

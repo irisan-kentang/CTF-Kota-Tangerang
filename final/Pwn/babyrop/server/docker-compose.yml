@@ -1,7 +1,12 @@
 version: '3'
 services:
-  ez-bof-1:
+  babyrop:
     build: .
     restart: on-failure
     ports:
       - 1002:5000
+
+networks:
+  babyrop-network:
+    driver: overlay
+    attachable: true

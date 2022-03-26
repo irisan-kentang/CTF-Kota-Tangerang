@@ -1,6 +1,6 @@
-FROM python:3-alpine
+FROM i386/ubuntu:18.04
 
-RUN apk add --no-cache socat
+RUN apt update && apt install socat -y
 
 EXPOSE 5000
 WORKDIR /challs
@@ -11,6 +11,5 @@ RUN chown -R root:root /challs/
 
 # Securing environ
 RUN chmod 700 /bin/* /tmp /dev/shm
-RUN chmod 755 /usr/bin/env /bin/sh /usr/bin/nc /bin/cat /usr/bin/wget /usr/bin/groups /usr/bin/id /bin/ls /usr/bin/vi
-
+RUN chmod 755 /usr/bin/env /bin/sh /bin/dash /bin/bash /bin/cat /usr/bin/groups /usr/bin/id /bin/ls
 CMD socat TCP-LISTEN:5000,reuseaddr,fork EXEC:./babystack2,su=nobody
