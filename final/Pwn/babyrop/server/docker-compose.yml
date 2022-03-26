@@ -1,0 +1,7 @@
+version: '3'
+services:
+  ez-bof-1:
+    build: .
+    restart: on-failure
+    ports:
+      - 1002:5000
