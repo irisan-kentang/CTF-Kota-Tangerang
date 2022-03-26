@@ -14,7 +14,7 @@ Apakah kamu bisa mengembalikan isi file yang terenkripsi?.<br>
 ---
 ## Proof of Concept
 
-AES OFB
+AES OFB xor vuln
 
 ## Flag
 
