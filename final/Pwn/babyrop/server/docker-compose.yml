@@ -8,5 +8,3 @@ services:
 
 networks:
   babyrop-network:
-    driver: overlay
-    attachable: true

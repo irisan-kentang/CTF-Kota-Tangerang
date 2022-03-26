@@ -8,5 +8,3 @@ services:
 
 networks:
   babystack-network:
-    driver: overlay
-    attachable: true
