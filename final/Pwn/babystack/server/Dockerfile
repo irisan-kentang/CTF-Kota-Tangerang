@@ -13,4 +13,4 @@ RUN chown -R root:root /challs/
 RUN chmod 700 /bin/* /tmp /dev/shm
 RUN chmod 755 /usr/bin/env /bin/sh /usr/bin/nc /bin/cat /usr/bin/wget /usr/bin/groups /usr/bin/id /bin/ls /usr/bin/vi
 
-CMD socat TCP-LISTEN:5000,reuseaddr,fork EXEC:./perkenalan-update-1.py,su=nobody
+CMD socat TCP-LISTEN:5000,reuseaddr,fork EXEC:./babystack2,su=nobody

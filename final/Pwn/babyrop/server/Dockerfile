@@ -13,4 +13,4 @@ WORKDIR /challs
 
 EXPOSE 5000
 
-CMD socat TCP-LISTEN:5000,reuseaddr,fork EXEC:./ez-pwn,su=nobody
+CMD socat TCP-LISTEN:5000,reuseaddr,fork EXEC:./babyrop2,su=nobody
